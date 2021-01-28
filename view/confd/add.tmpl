@@ -1,0 +1,104 @@
+{{define "confd/add.tmpl"}}
+<div class="modal fade" id="add-modal" tabindex="-1" role="dialog" aria-labelledby="add-modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                 <h4 class="modal-title" id="add-modalLabel">
+                    新增项目
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                &times;
+                </button>
+            </div>
+            
+            <!--模块内容 -->
+            <div class="modal-body" style="height: 100%;">
+                <form id="add-form" class="form-horizontal form-ajax" role="form" data-toggle="validator">
+                    
+                    <div class="form-group">
+                    <label for="serverId" class="col-sm-3 control-label">服务器id</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="serverId" id="add-serverId"
+                               placeholder="请输入服务器id">
+                    </div>
+                    </div>
+                    
+                    <div class="form-group">
+                    <label for="serverName" class="col-sm-3 control-label">服务器名称</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="serverName" id="add-serverName"
+                               placeholder="请输入名称">
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="datadir" class="col-sm-3 control-label">配置路径</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="datadir" id="add-datadir"
+                               placeholder="请输入路径">
+                    </div>
+                    </div>
+
+
+                    <div class="form-group">
+                    <label for="netserverconf" class="col-sm-3 control-label">netserverconf</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="netserverconf" id="add-netserverconf"
+                               placeholder="netserver">
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="netclientconf" class="col-sm-3 control-label">netclientconf</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="netclientconf" id="add-netclientconf"
+                               placeholder="netserver">
+                    </div>
+                    </div>
+
+                      <div class="form-group">
+                    <label for="logconf" class="col-sm-3 control-label">logconf</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="logconf" id="add-logconf"
+                               placeholder="logconf">
+                    </div>
+                    </div>
+
+
+                      <div class="form-group">
+                    <label for="mysqlconf" class="col-sm-3 control-label">mysqlconf</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="mysqlconf" id="add-mysqlconf"
+                               placeholder="mysqlconf">
+                    </div>
+                    </div>
+
+                      <div class="form-group">
+                    <label for="httpserverconf" class="col-sm-3 control-label">httpserverconf</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="httpserverconf" id="add-httpserverconf"
+                               placeholder="httpserverconf">
+                    </div>
+                    </div>
+
+
+                    <div class="form-group">
+                    <label for="redisconf" class="col-sm-3 control-label">redisconf</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="redisconf" id="add-redisconf"
+                               placeholder="netserver">
+                    </div>
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary" id="add-submit">提交</button>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+{{end}}

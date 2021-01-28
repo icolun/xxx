@@ -1,0 +1,83 @@
+{{define "auth/edit.tmpl"}}
+
+<div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="edit-modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                 <h4 class="modal-title" id="edit-modalLabel">
+                    编辑账号
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                &times;
+                </button>
+            </div>
+            
+            <!--模块内容 -->
+            <div class="modal-body" style="height: 100%;">
+                <form id="edit-form" class="form-horizontal form-ajax" role="form" data-toggle="validator">
+
+                    <div class="form-group">
+                    <label for="id" class="col-sm-3 control-label">id</label>
+                    <div class="col-sm-7">
+                        <input type="text"  readonly  class="form-control"  name="id" id="edit-id"
+                               value="">
+                        </input>
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="account" class="col-sm-3 control-label">账号</label>
+                    <div class="col-sm-7">
+                        <input type="text"  readonly  class="form-control"  name="account" id="edit-account">
+                        </input>
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="name" class="col-sm-3 control-label">名称</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="name" id="edit-name"
+                               placeholder="请输入名称">
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="email" class="col-sm-3 control-label">邮箱</label>
+                    <div class="col-sm-7">
+                        <input type="text"  readonly  class="form-control"  name="email" id="edit-email">
+                        </input>
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">密码</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="password" id="edit-password" data-rule="required"
+                               placeholder="请输入密码">
+                        </input>
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="groupId" class="col-sm-3 control-label">组别</label>
+                    <div class="col-sm-7">
+                        <select class="selectpicker"  name="groupId" id="edit-groupId" data-live-search="true"
+                               placeholder="请选择所属必填项, 后期可以选择select">
+                            {{ range $c := . }}
+                                <option value={{$c.Id}}>{{$c.Name}}</option>
+                            {{end}}        
+                        </select>
+                    </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="submit" class="btn btn-primary" id="edit-submit">提交</button>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+{{end}}

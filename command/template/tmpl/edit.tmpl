@@ -1,0 +1,30 @@
+{{define "auth/edit.tmpl"}}
+
+<div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="edit-modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                 <h4 class="modal-title" id="edit-modalLabel">
+                    编辑账号
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                &times;
+                </button>
+            </div>
+            
+            <!--模块内容 -->
+            <div class="modal-body" style="height: 100%;">
+                <form id="edit-form" class="form-horizontal form-ajax" role="form" data-toggle="validator">
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="submit" class="btn btn-primary" id="edit-submit">提交</button>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+{{end}}

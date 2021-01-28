@@ -1,0 +1,74 @@
+
+[{
+    "text": "控制台",
+    "icon": "fa fa-user",
+    "href": "/"
+    },
+    {
+    "text": "权限管理",
+    "icon": "fa fa-user",
+    "href": "#",
+    "nodes": [
+        {
+        "text": "会员管理",
+        "icon": "fa fa-user",
+        "href": "/admin/auth/index"
+        },
+        {
+        "text": "角色组",
+        "icon": "fa fa-user",
+        "href": "/admin/authGroup/index"
+        },
+        {
+        "text": "菜单规则",
+        "icon": "fa fa-user",
+        "href": "/admin/rule/index"
+        }
+      ]
+    },
+    {
+    "text": "confd",
+    "href":"#",
+    "icon": "fa fa-user",
+    "nodes":[
+        {
+            "text":"epogt",
+            "icon": "fa fa-user",
+            "href": "/admin/confd/index"
+
+        },
+         {
+        "text": "暖暖confd",
+        "icon": "fa fa-user",
+        "href": "#",
+        "nodes": [
+            {
+            "text": "台服",
+            "icon": "fa fa-user",
+            "href": "#",
+            "nodes":[
+                    {
+                    "text": "dev",
+                        "icon": "fa fa-user",
+                    "href": "#"
+                    },
+                    {
+                    "text": "stable",
+                        "icon": "fa fa-user",
+                    "href": "#"
+                    }
+              ]
+            },
+            {
+            "text": "国服",
+                "icon": "fa fa-user",
+            "href": "#"
+            }
+          ]
+        }]
+        },
+     {
+    "text": "敬请期待1",
+    "href": "/nindex"
+    }
+]

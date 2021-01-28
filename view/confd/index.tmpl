@@ -1,0 +1,43 @@
+  {{define "confd/index.tmpl"}}
+    {{template "header"}}
+    <body class="hold-transition skin-blue sidebar-mini">
+      <div class="wrapper">
+
+         <!-- 头部区域 --->
+        <nav class="main-header navbar navbar-expand navbar-dark navbar-light">
+        {{template "nav"}}
+        </nav>
+      
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+          <!-- 左侧菜单栏 --->
+          {{template "sidebar"}}
+        </aside>
+
+        <!-- 主体内容区域 -->
+        <div class="content-wrapper">
+
+          {{template "confd/content.tmpl"}}
+
+          <!-- 新增模式框 -->
+          {{template "confd/add.tmpl"}}
+
+          <!-- 管理编辑模式框 -->
+          {{template "confd/edit.tmpl"}}
+        <div>
+
+        <!-- 控制面板 -->
+        <aside class="control-sidebar control-sidebar-dark">
+        </aside>
+
+        <footer class="main-footer">
+        <!-- 底部链接 --->
+        {{template "footer"}}
+        </footer>
+
+    </div>
+      {{template "script" "confd" }}
+    </body>
+    
+{{end}}
+
+

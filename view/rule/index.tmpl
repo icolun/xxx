@@ -1,0 +1,43 @@
+  {{define "rule/index.tmpl"}}
+    {{template "header"}}
+    <body class="hold-transition skin-red sidebar-mini">
+      <div class="wrapper">
+
+         <!-- 头部区域 --->
+        <header class="main-header navbar navbar-expand navbar-dark navbar-light">
+        {{template "nav"}}
+        </header>
+      
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+          <!-- 左侧菜单栏 --->
+          {{template "sidebar"}}
+        </aside>
+
+        <!-- 主体内容区域 -->
+        <div class="content-wrapper">
+
+          {{template "rule/content.tmpl"}}
+
+          <!-- 账号新增模式框 -->
+          {{template "rule/add.tmpl" .rules}}
+
+          <!-- 账号管理编辑模式框 -->
+          {{template "rule/edit.tmpl" .rules}}
+        <div>
+
+        <!-- 控制面板 -->
+        <aside class="control-sidebar control-sidebar-dark">
+        </aside>
+
+        <footer class="main-footer">
+        <!-- 底部链接 --->
+        {{template "footer"}}
+        </footer>
+
+    </div>
+      {{template "script" "rule" }}
+    </body>
+    
+{{end}}
+
+

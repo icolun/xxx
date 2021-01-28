@@ -1,0 +1,93 @@
+{{define "confd/edit.tmpl"}}
+<div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-labelledby="edit-modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                 <h4 class="modal-title" id="edit-modalLabel">
+                    修改confd
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                &times;
+                </button>
+            </div>
+            
+            <!--模块内容 -->
+            <div class="modal-body" style="height: 100%;">
+                <form id="edit-form" class="form-horizontal form-ajax" role="form" data-toggle="validator">
+
+                     <div class="form-group">
+                    <label for="serverId" class="col-sm-3 control-label">服务器id</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="serverId" id="edit-serverId"
+                               placeholder="请输入服务器id">
+                    </div>
+                    </div>
+                    
+                    <div class="form-group">
+                    <label for="serverName" class="col-sm-3 control-label">服务器名称</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="serverName" id="edit-serverName"
+                               placeholder="请输入名称">
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="datadir" class="col-sm-3 control-label">配置路径</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="datadir" id="edit-datadir"
+                               placeholder="请输入路径">
+                    </div>
+                    </div>
+
+
+                    <div class="form-group">
+                    <label for="netserverconf" class="col-sm-3 control-label">netserverconf</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="netserverconf" id="edit-netserverconf"
+                               placeholder="netserver">
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="netclientconf" class="col-sm-3 control-label">netclientconf</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="netclientconf" id="edit-netclientconf"
+                               placeholder="netserver">
+                    </div>
+                    </div>
+
+                      <div class="form-group">
+                    <label for="logconf" class="col-sm-3 control-label">logconf</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="logconf" id="edit-logconf"
+                               placeholder="logconf">
+                    </div>
+                    </div>
+
+
+                      <div class="form-group">
+                    <label for="mysqlconf" class="col-sm-3 control-label">mysqlconf</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="mysqlconf" id="edit-mysqlconf"
+                               placeholder="mysqlconf">
+                    </div>
+                    </div>
+
+                      <div class="form-group">
+                    <label for="httpserverconf" class="col-sm-3 control-label">httpserverconf</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control"  name="httpserverconf" id="edit-httpserverconf"
+                               placeholder="httpserverconf">
+                    </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary" id="edit-submit">提交</button>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+{{end}}
